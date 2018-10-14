@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
+import memoize from 'memoize-one';
+
 import Container from './Container';
 import Project from './Project';
 
 export const baseUrl = 'gordonscampinggear.com';
 
 class App extends Component {
+  filter = memoize(
+    (projects, skill) =>
+      !skill
+        ? projects
+        : projects.filter(project => {
+            if (project.heading) {
+              return true;
+            }
+            return project.skills.includes(skill);
+          })
+  );
+
   state = {
     activeModal: -1,
-
+    filter: '',
+    skills: ['html', 'css', 'javascript', 'react'],
     projects: [
       { name: 'Responsive Web Design', heading: true },
       {
@@ -17,6 +32,7 @@ class App extends Component {
         images: ['tribute.png', 'product.png'],
         url: 'tribute',
         repo: 'fcc-tribute',
+        skills: ['css'],
         copy: [
           'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
           'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
@@ -29,13 +45,15 @@ class App extends Component {
         name: 'Survey Form',
         images: ['survey.png'],
         url: 'survey',
-        repo: 'fcc-survey'
+        repo: 'fcc-survey',
+        skills: ['css']
       },
       {
         name: 'Product Landing Page',
         images: ['product.png'],
         url: 'product',
-        repo: 'fcc-product'
+        repo: 'fcc-product',
+        skills: ['css']
       },
       { name: 'Empty Section in Middle', heading: true },
       { name: 'Front End Libraries', heading: true },
@@ -43,13 +61,15 @@ class App extends Component {
         name: 'Random Quote Machine',
         images: ['quote.png'],
         url: 'quote',
-        repo: 'fcc-quote'
+        repo: 'fcc-quote',
+        skills: ['css', 'react']
       },
       {
         name: 'Markdown Previewer',
         images: ['markdown.png'],
         url: 'markdown',
-        repo: 'fcc-markdown'
+        repo: 'fcc-markdown',
+        skills: ['css', 'react']
       },
       { name: 'Empty Section at End', heading: true }
     ]
@@ -72,7 +92,21 @@ class App extends Component {
     });
   };
 
+  handleFilterClick = event => {
+    this.setState({
+      filter:
+        this.state.filter === event.target.dataset.skill
+          ? ''
+          : event.target.dataset.skill
+    });
+  };
+
   render() {
+    const filteredProjects = this.filter(
+      this.state.projects,
+      this.state.filter
+    );
+
     return (
       <div id="home">
         <header>
@@ -103,8 +137,30 @@ class App extends Component {
             <Container w={1200}>
               <h1>Work</h1>
 
+              <button
+                data-skill=""
+                onClick={this.handleFilterClick}
+                className={`button${
+                  this.state.filter === '' ? ' button-skill' : ''
+                }`}
+              >
+                All
+              </button>
+              {this.state.skills.map(skill => (
+                <button
+                  key={skill}
+                  data-skill={skill}
+                  className={`button${
+                    skill === this.state.filter ? ' button-skill' : ''
+                  }`}
+                  onClick={this.handleFilterClick}
+                >
+                  {skill}
+                </button>
+              ))}
+
               <div className="project-grid">
-                {this.state.projects.map((project, i, a) => {
+                {filteredProjects.map((project, i, a) => {
                   if (project.heading) {
                     if (i + 1 === a.length || a[i + 1].heading) {
                       return null;

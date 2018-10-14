@@ -23,6 +23,33 @@ section {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+/* Buttons */
+.button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+  color: #0d47a1;
+  background: #bbdefb;
+}
+.button:hover {
+  background: #64b5f6;
+}
+.button:focus {
+  outline-width: 0;
+}
+.button-skill {
+  background: #0d47a1;
+  color: white;
+}
+.button-skill:hover {
+  background: #1976d2;
+}
+
 /* Modal */
 #modal {
   background: rgba(0, 0, 0, 0.7);
