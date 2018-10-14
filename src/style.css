@@ -1,0 +1,135 @@
+/* Reset */
+body {
+  margin: 0;
+  background: #eee;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Base */
+section {
+  padding: 0 1em;
+}
+
+/* Utility */
+.card {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  padding: 1em 0.5em;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+header a {
+  text-align: center;
+  padding: 0.5em 0;
+}
+header a:first-child {
+  padding-top: 0;
+}
+header a:last-child {
+  padding-bottom: 0;
+}
+@media screen and (min-width: 450px) {
+  header div {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: flex-end;
+  }
+  header a {
+    padding: 0 1em;
+  }
+  header a:first-child {
+    margin-right: auto;
+  }
+  header a:first-child {
+    padding-left: 0;
+  }
+  header a:last-child {
+    padding-right: 0;
+  }
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0.5em;
+}
+
+/* Page Layout */
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+/* Debug */
+section {
+  min-height: 10vh;
+}
+
+/* Project */
+.project-section {
+  padding-bottom: 1em;
+}
+.project-header {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0.5em;
+}
+.project-header h1 {
+  margin: 0;
+}
+.project-image img {
+  display: block;
+  width: 100%;
+}
+
+/* without grid */
+.project {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.project:last-child {
+  margin-bottom: 0;
+}
+/* with grid */
+@supports (display: grid) {
+  @media screen and (min-width: 800px) {
+    .project {
+      max-width: none;
+      margin: 0;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .project-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
