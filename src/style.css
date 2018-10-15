@@ -25,21 +25,13 @@ section {
   padding: 0 1em;
 }
 
-/*
-font-family: 'Black Ops One', cursive;
-font-family: 'Titillium Web', sans-serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
 /* Fonts */
-
 h1 {
   font-size: 2em;
 }
 h2 {
   font-size: 1.5em;
 }
-
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
@@ -47,17 +39,13 @@ body {
   font-family: 'Black Ops One', Helvetica, Arial, sans-serif;
   font-size: 1.3em;
 }
-
 h1,
 h2 {
   font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
 }
-
 .hero-title h1,
 .hero-title h2 {
-  /* font-size: 2em; */
   font-family: 'Black Ops One', Helvetica, Arial, sans-serif;
-  /* color: white; */
 }
 
 /* Utility */
@@ -194,20 +182,12 @@ main {
 }
 
 /* Hero */
-
 #hero {
-  /* min-height: 60vh; */
   background-image: url('./yellowstone.jpg');
   background-position: bottom right;
 }
-
 .hero-title {
-  /* border: 1px solid red; */
-  /* color: white; */
   text-align: center;
-  /* padding: 2em 0; */
-
-  /* font-size: 1.5em; */
 }
 .hero-title img {
   text-align: center;
@@ -215,16 +195,11 @@ main {
   border-radius: 50%;
   width: 100px;
 }
-
 .hero-title h1,
 .hero-title h2 {
   text-shadow: -1px 1px 1px #ffffff, -1px -1px 1px #ffffff, 1px 1px 1px #ffffff,
     1px -1px 1px #ffffff;
 }
-
-/* .hero-copy-inner {
-  padding: 1em;
-} */
 
 .hero-title {
   font-size: 1.5em;
