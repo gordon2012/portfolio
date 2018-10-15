@@ -135,39 +135,61 @@ class App extends Component {
           </section>
 
           <section id="profile">
-            <h1>Profile</h1>
+            <Container w={800}>
+              <div className="profile card">
+                <h1>Profile</h1>
+                <p
+                >{`I am a Front End Web Developer with a bachelor's degree in IT: Software Engineering at Salt Creek Media Inc, an enterprise software shop that develops and maintains custom ERP, CRM, and automation software for a large Direct Mail Print shop. Most of my time is spent building custom, responsive, mobile friendly marketing landing pages for clients to improve the effectiveness of their direct mail campaigns. I also frequently add features to our customer facing and internal web applications.`}</p>
+
+                <p
+                >{`I am skilled in many front end technologies including HTML, CSS, SASS, Bootstrap JavaScript, JQuery, and React. I am also familiar with back end technologies such as PHP, CakePHP, Apache, MongoDB, and MySQL. I frequently use various tools and methodologies such as Git, GitHub, npm, Gulp, Webpack, Bash, and Scrum.`}</p>
+              </div>
+            </Container>
           </section>
 
           <section id="skills">
-            <h1>Skills</h1>
+            <Container w={800}>
+              <div className="skills card">
+                <h1>Skills</h1>
+              </div>
+            </Container>
           </section>
 
           <section id="work">
             <Container w={1200}>
-              <h1>Work</h1>
+              <div className="work card">
+                <h1>Work</h1>
 
-              <button
-                data-skill=""
-                onClick={this.handleFilterClick}
-                className={`button${
-                  this.state.filter === '' ? ' button-skill' : ''
-                }`}
-              >
-                All
-              </button>
-              {this.state.skills.map(skill => (
-                <button
-                  key={skill}
-                  data-skill={skill}
-                  className={`button${
-                    skill === this.state.filter ? ' button-skill' : ''
-                  }`}
-                  onClick={this.handleFilterClick}
-                >
-                  {skill}
-                </button>
-              ))}
+                <Container w={800}>
+                  <div className="work-filter">
+                    <h2>Filter Projects</h2>
+                    <button
+                      data-skill=""
+                      onClick={this.handleFilterClick}
+                      className={`button${
+                        this.state.filter === '' ? ' button-skill' : ''
+                      }`}
+                    >
+                      All
+                    </button>
+                    {this.state.skills.map(skill => (
+                      <button
+                        key={skill}
+                        data-skill={skill}
+                        className={`button${
+                          skill === this.state.filter ? ' button-skill' : ''
+                        }`}
+                        onClick={this.handleFilterClick}
+                      >
+                        {skill}
+                      </button>
+                    ))}
+                  </div>
+                </Container>
+              </div>
+            </Container>
 
+            <Container w={1200}>
               <div className="project-grid">
                 {filteredProjects.map((project, i, a) => {
                   if (project.heading) {

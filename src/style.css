@@ -218,7 +218,44 @@ main {
   }
 }
 
-/* Project */
+/* Profile */
+#profile {
+  padding-top: 1em;
+}
+.profile {
+  padding: 1em;
+}
+.profile h1 {
+  text-align: center;
+}
+
+/* Skills */
+#skills {
+  padding-top: 1em;
+}
+.skills {
+  padding: 1em;
+}
+.skills h1 {
+  text-align: center;
+}
+
+/* Work */
+#work {
+  padding-top: 1em;
+}
+.work {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.work h1 {
+  text-align: center;
+}
+.work-filter {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+/* work projects */
 .project-grid {
   padding-bottom: 1em;
 }
