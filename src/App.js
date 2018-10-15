@@ -111,8 +111,8 @@ class App extends Component {
       <div id="home">
         <header>
           <Container w={800}>
-            <a href="#home">
-              <strong>Gordon Doskas</strong>
+            <a href="#home" className="brand">
+              Gordon Doskas
             </a>
             <a href="#profile">Profile</a>
             <a href="#skills">Skills</a>
@@ -121,8 +121,17 @@ class App extends Component {
         </header>
 
         <main>
-          <section>
-            <h1>Hero</h1>
+          <section id="hero">
+            <Container w={800}>
+              <div className="hero-title">
+                <img
+                  src="https://avatars2.githubusercontent.com/u/9071982?s=460&v=4"
+                  alt="Gordon Doskas"
+                />
+                <h1>Gordon Doskas</h1>
+                <h2>Front End Web Developer</h2>
+              </div>
+            </Container>
           </section>
 
           <section id="profile">
