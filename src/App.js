@@ -24,7 +24,14 @@ class App extends Component {
   state = {
     activeModal: -1,
     filter: '',
-    skills: ['html', 'css', 'javascript', 'react'],
+
+    skills: [
+      { name: 'html', amount: 80 },
+      { name: 'css', amount: 90 },
+      { name: 'javascript', amount: 70 },
+      { name: 'react', amount: 60 }
+    ],
+
     projects: [
       { name: 'Responsive Web Design', heading: true },
       {
@@ -151,6 +158,41 @@ class App extends Component {
             <Container w={800}>
               <div className="skills card">
                 <h1>Skills</h1>
+
+                <div className="skills-wrap">
+                  {false &&
+                    this.state.skills.map(skill => (
+                      <div key={skill.name} className="skill">
+                        <div className="skill-label">{skill.name}</div>
+                        <div className="skill-amount">
+                          <div
+                            className="skill-percent"
+                            style={{ width: `${skill.amount}%` }}
+                          >
+                            {skill.amount}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+
+                  <div className="skills-column skills-label">
+                    {this.state.skills.map(skill => (
+                      <div key={skill.name}>{skill.name}</div>
+                    ))}
+                  </div>
+
+                  <div className="skills-column skills-amount">
+                    {this.state.skills.map(skill => (
+                      <div
+                        key={skill.name}
+                        className="skill-percent"
+                        style={{ width: `${skill.amount}%` }}
+                      >
+                        {skill.amount}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </Container>
           </section>
@@ -174,14 +216,16 @@ class App extends Component {
                     </button>
                     {this.state.skills.map(skill => (
                       <button
-                        key={skill}
-                        data-skill={skill}
+                        key={skill.name}
+                        data-skill={skill.name}
                         className={`button${
-                          skill === this.state.filter ? ' button-skill' : ''
+                          skill.name === this.state.filter
+                            ? ' button-skill'
+                            : ''
                         }`}
                         onClick={this.handleFilterClick}
                       >
-                        {skill}
+                        {skill.name}
                       </button>
                     ))}
                   </div>
