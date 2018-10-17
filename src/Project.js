@@ -19,6 +19,11 @@ const Project = props => {
       </div>
       <div className="project-header">
         <h1>{props.name}</h1>
+        <div className="project-header-skills">
+          {props.skills.map(skill => (
+            <div key={skill}>{skill}</div>
+          ))}
+        </div>
       </div>
       <div className="project-image">
         <img src={images[0]} alt={props.name} />

@@ -238,46 +238,37 @@ main {
 }
 .skills h1 {
   text-align: center;
+  margin-bottom: 0.5em;
 }
-
 .skills-wrap {
-  border: 3px solid red;
-  padding: 1em;
-
   display: flex;
 }
-
-.skill {
-  /* border: 1px solid magenta; */
-  /* border: 1px solid blue; */
-  /* display: flex; */
-}
-
-.skills-column {
-  padding: 5px;
-  border: 1px solid magenta;
-}
 .skills-column > div {
-  border: 1px solid blue;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
 }
-
-.skills-label {
-  /* flex: 1; */
+.skills-column > div:last-child {
+  margin-bottom: 0;
 }
+.skills-label-inner {
+  border: 3px solid transparent;
+  font-weight: bold;
+  color: #1b5e20;
 
+  display: flex;
+  justify-content: flex-end;
+}
 .skills-amount {
-  /* padding: 5px; */
-  /* border: 1px solid lime; */
-
   flex: 1;
-
-  /* flex: 4; */
 }
-
-.skill-percent {
-  /* background: lime; */
-  /* border: 1px solid black; */
-  /* padding: 0.2em 0.5em; */
+.skills-amount-percent {
+  border: 3px solid #005005;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+}
+.skills-amount-percent span {
+  padding-left: 0.5em;
 }
 
 /* Work */
@@ -290,10 +281,14 @@ main {
 }
 .work h1 {
   text-align: center;
+  margin-bottom: 0.5em;
 }
 .work-filter {
   border: 1px solid #ddd;
-  padding: 0.5em;
+  padding: 0.5em 1em;
+}
+.work-filter h2 {
+  margin-bottom: 0.5em;
 }
 /* work projects */
 .project-grid {
@@ -302,7 +297,9 @@ main {
 .project {
   border: none;
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   padding: 0;
 }
 .project-hover,
@@ -334,11 +331,28 @@ main {
 .project-header {
   background: #333;
   color: white;
-  text-align: center;
-  padding: 1em 0.5em;
+  padding: 0.5em 0.5em 1.5em;
 }
 .project-header h1 {
-  margin: 0;
+  margin-bottom: 0.5em;
+}
+.project-header-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project-header-skills div {
+  border: 1px solid #b71c1c;
+  background: #7f0000;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.3em 0.5em;
+  margin-bottom: 0.5em;
+  margin: 0 0.2em;
+}
+.project-image {
+  flex: 1;
 }
 .project-image img {
   display: block;

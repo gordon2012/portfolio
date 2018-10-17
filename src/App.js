@@ -177,7 +177,9 @@ class App extends Component {
 
                   <div className="skills-column skills-label">
                     {this.state.skills.map(skill => (
-                      <div key={skill.name}>{skill.name}</div>
+                      <div key={skill.name} className="skills-label-inner">
+                        {skill.name}
+                      </div>
                     ))}
                   </div>
 
@@ -185,10 +187,10 @@ class App extends Component {
                     {this.state.skills.map(skill => (
                       <div
                         key={skill.name}
-                        className="skill-percent"
+                        className="skills-amount-percent"
                         style={{ width: `${skill.amount}%` }}
                       >
-                        {skill.amount}
+                        <span>{skill.amount}%</span>
                       </div>
                     ))}
                   </div>
@@ -255,6 +257,7 @@ class App extends Component {
                         url={project.url}
                         repo={project.repo}
                         copy={project.copy}
+                        skills={project.skills}
                         handleProjectClick={this.handleProjectClick}
                         handleCancelClick={this.handleCancelClick}
                         index={i}
