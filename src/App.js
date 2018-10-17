@@ -29,23 +29,21 @@ class App extends Component {
       { name: 'html', amount: 80 },
       { name: 'css', amount: 90 },
       { name: 'javascript', amount: 70 },
-      { name: 'react', amount: 60 }
+      { name: 'react', amount: 60 },
+      { name: 'd3', amount: 40 }
     ],
 
     projects: [
+      // section
       { name: 'Responsive Web Design', heading: true },
       {
         name: 'Tribute',
-        images: ['tribute.png', 'product.png'],
+        images: ['tribute.png'],
         url: 'tribute',
         repo: 'fcc-tribute',
-        skills: ['css'],
+        skills: ['html', 'css'],
         copy: [
-          'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
-          'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
-          'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
-          'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.',
-          'Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum.'
+          'A freeCodeCamp Responsive Web Design project, this simple website is a tribute to Thor, the god of thunder, a fictional character in the Marvel Cinematic Universe. It features a timeline that showcases his accomplishments over the years. Warning: Spoiler Alert.'
         ]
       },
       {
@@ -53,32 +51,126 @@ class App extends Component {
         images: ['survey.png'],
         url: 'survey',
         repo: 'fcc-survey',
-        skills: ['css']
+        skills: ['html', 'css'],
+        copy: [
+          'A freeCodeCamp Responsive Web Design project, this simple website is a survey form that asks the user a series of questions.'
+        ]
       },
       {
         name: 'Product Landing Page',
         images: ['product.png'],
         url: 'product',
         repo: 'fcc-product',
-        skills: ['css']
+        skills: ['html', 'css'],
+        copy: [
+          'A freeCodeCamp Responsive Web Design project, this simple website is landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
+        ]
       },
-      { name: 'Empty Section in Middle', heading: true },
+
+      {
+        name: 'Technical Documentation',
+        images: ['documentation.png'],
+        url: 'documentation',
+        repo: 'fcc-documentation',
+        skills: ['html', 'css'],
+        copy: [
+          'A freeCodeCamp Responsive Web Design project, this simple website is technical documentation for a number of useful bash commands. It features a sidebar, section headers, and monospaced formatted code blocks, similar to what is often seen on blog or tutorial posts.'
+        ]
+      },
+
+      {
+        name: 'Personal Portfolio',
+        images: ['portfolio.png'],
+        url: 'portfolio',
+        repo: 'fcc-portfolio',
+        skills: ['html', 'css'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      // section
       { name: 'Front End Libraries', heading: true },
       {
         name: 'Random Quote Machine',
         images: ['quote.png'],
         url: 'quote',
         repo: 'fcc-quote',
-        skills: ['css', 'react']
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
       {
         name: 'Markdown Previewer',
         images: ['markdown.png'],
         url: 'markdown',
         repo: 'fcc-markdown',
-        skills: ['css', 'react']
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
-      { name: 'Empty Section at End', heading: true }
+
+      {
+        name: 'Drum Machine',
+        images: ['drum.png'],
+        url: 'drum',
+        repo: 'fcc-drum',
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      {
+        name: 'Javascript Calculator',
+        images: ['calculator.png'],
+        url: 'calculator',
+        repo: 'fcc-calculator',
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      {
+        name: 'Pomodoro Clock',
+        images: ['pomodoro.png'],
+        url: 'pomodoro',
+        repo: 'fcc-pomodoro',
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      // section
+      { name: 'Data Visualization', heading: true },
+
+      {
+        name: 'Bar Chart',
+        images: ['barchart.png'],
+        url: 'barchart',
+        repo: 'fcc-barchart',
+        skills: ['html', 'css', 'javascript', 'd3'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      {
+        name: 'Scatterplot Graph',
+        images: ['scatterplot.png'],
+        url: 'scatterplot',
+        repo: 'fcc-scatterplot',
+        skills: ['html', 'css', 'javascript', 'd3'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      },
+
+      {
+        name: 'Heat Map',
+        images: ['heatmap.png'],
+        url: 'heatmap',
+        repo: 'fcc-heatmap',
+        skills: ['html', 'css', 'javascript', 'd3'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      }
+
+      /*{
+        name: '_',
+        images: ['_.png'],
+        url: '_',
+        repo: 'fcc-_',
+        skills: ['html', 'css', 'javascript', 'd3'],
+        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+      }*/
     ]
   };
 

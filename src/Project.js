@@ -2,6 +2,7 @@ import React from 'react';
 import { baseUrl } from './App';
 
 import Modal from './Modal';
+import Container from './Container';
 
 const Project = props => {
   const images = props.images.map(image => `https://${baseUrl}/img/${image}`);
@@ -43,7 +44,13 @@ const Project = props => {
             </div>
 
             <div className="project-modal-copy">
-              {props.copy && props.copy.map((copy, i) => <p key={i}>{copy}</p>)}
+              <Container w={800}>
+                {props.copy &&
+                  props.copy.map((copy, i) => <p key={i}>{copy}</p>)}
+                <p>
+                  {'Technologies used: '} {props.skills.join(', ')}
+                </p>
+              </Container>
             </div>
 
             <div className="project-modal-buttons">

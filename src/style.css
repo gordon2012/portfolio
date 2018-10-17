@@ -19,6 +19,9 @@ h6 {
 section {
   min-height: 10vh;
 }
+.rb {
+  border: 3px solid red;
+}
 
 /* Base */
 section {
