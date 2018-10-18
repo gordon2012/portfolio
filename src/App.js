@@ -103,7 +103,7 @@ class App extends Component {
           }
         ],
         skills: ['html', 'css'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Responsive Web Design project, this simple website is a showcase of my completed freeCodeCamp projects. It features a mobile responsive and progressively enhanced css grid based layout.']
       },
 
       // section
@@ -113,14 +113,14 @@ class App extends Component {
         images: ['quote.png'],
         links: basicLinks('quote'),
         skills: ['html', 'css', 'javascript', 'react'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Front End Library project build with React, this website uses the talaikis.com api to generate random quotes and allows them to be tweeted out.']
       },
       {
         name: 'Markdown Previewer',
         images: ['markdown.png'],
         links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Front End Library project build with React, this website is a real time markdown previewer.']
       },
 
       {
@@ -128,7 +128,7 @@ class App extends Component {
         images: ['drum.png'],
         links: basicLinks('drum'),
         skills: ['html', 'css', 'javascript', 'react'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Front End Library project build with React, this website is a soundboard that contains all drum sounds.']
       },
 
       {
@@ -136,7 +136,7 @@ class App extends Component {
         images: ['calculator.png'],
         links: basicLinks('calculator'),
         skills: ['html', 'css', 'javascript', 'react'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Front End Library project build with React, this website is a standard calculator with addition, subtraction, multiplication, and division.']
       },
 
       {
@@ -144,7 +144,7 @@ class App extends Component {
         images: ['pomodoro.png'],
         links: basicLinks('pomodoro'),
         skills: ['html', 'css', 'javascript', 'react'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Front End Library project build with React, this website is a tool to implement the Pomodoro method, which involves doing 25 minutes of work and 5 minutes of rest. The work and rest times are configurable.']
       },
 
       // section
@@ -155,7 +155,7 @@ class App extends Component {
         images: ['barchart.png'],
         links: basicLinks('barchart'),
         skills: ['html', 'css', 'javascript', 'd3'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Data Visualization project build with D3, this website is a visualization of the rise (and occasional slight fall) of the United States GDP since 1947.']
       },
 
       {
@@ -163,7 +163,7 @@ class App extends Component {
         images: ['scatterplot.png'],
         links: basicLinks('scatterplot'),
         skills: ['html', 'css', 'javascript', 'd3'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Data Visualization project build with D3, this website is a visualization of cycling times of doping and clean riders since 1994.']
       },
 
       {
@@ -171,7 +171,7 @@ class App extends Component {
         images: ['heatmap.png'],
         links: basicLinks('heatmap'),
         skills: ['html', 'css', 'javascript', 'd3'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
+        copy: ['A freeCodeCamp Data Visualization project build with D3, this website is a visualization of the variation in global temperature since 1753.']
       }
 
       /*{
