@@ -438,16 +438,24 @@ main {
   padding: 0 1em;
   text-align: justify;
 }
-
 .project-modal-buttons {
+  padding: 1em;
   background: white;
   border-top: 1px solid #eee;
   position: sticky;
   bottom: 0;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1em;
 }
-.project-modal-buttons > div {
-  flex: 1;
+.project-modal-button {
+  border: 1px solid #aaa;
+  padding: 0.8em 0.3em;
+  background: white;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+.project-modal-button:hover {
+  background: #f8f8f8;
 }

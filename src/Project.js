@@ -4,6 +4,19 @@ import { baseUrl } from './App';
 import Modal from './Modal';
 import Container from './Container';
 
+const ModalButton = props => {
+  return (
+    <a
+      href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-modal-button"
+    >
+      {props.children}
+    </a>
+  );
+};
+
 const Project = props => {
   const images = props.images.map(image => `https://${baseUrl}/img/${image}`);
 
@@ -54,30 +67,12 @@ const Project = props => {
             </div>
 
             <div className="project-modal-buttons">
-              <div>
-                <a
-                  href={`https://${props.url}.${baseUrl}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://imgplaceholder.com/40x40/transparent/333/fa-external-link"
-                    alt="Visit Demo"
-                  />
-                </a>
-              </div>
-              <div>
-                <a
-                  href={`https://github.com/gordon2012/${props.repo}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://imgplaceholder.com/40x40/transparent/333/fa-github"
-                    alt="View Repository"
-                  />
-                </a>
-              </div>
+              {props.links &&
+                props.links.map((link, i) => (
+                  <ModalButton key={i} url={link.url}>
+                    {link.title}
+                  </ModalButton>
+                ))}
             </div>
           </div>
         </Modal>

@@ -8,6 +8,24 @@ import Project from './Project';
 
 export const baseUrl = 'gordonscampinggear.com';
 
+const siteUrl = sub => `https://${sub}.${baseUrl}`;
+const githubUrl = repo => `https://github.com/gordon2012/${repo}`;
+
+const LinkImg = () => (
+  <img src={require('./fa-external-link.png')} alt="Visit Site" />
+);
+const GithubImg = () => (
+  <img src={require('./fa-github.png')} alt="View Repository" />
+);
+
+const basicLinks = name => [
+  { title: <LinkImg />, url: siteUrl(name) },
+  {
+    title: <GithubImg />,
+    url: githubUrl(`fcc-${name}`)
+  }
+];
+
 class App extends Component {
   filter = memoize(
     (projects, skill) =>
@@ -39,8 +57,7 @@ class App extends Component {
       {
         name: 'Tribute',
         images: ['tribute.png'],
-        url: 'tribute',
-        repo: 'fcc-tribute',
+        links: basicLinks('tribute'),
         skills: ['html', 'css'],
         copy: [
           'A freeCodeCamp Responsive Web Design project, this simple website is a tribute to Thor, the god of thunder, a fictional character in the Marvel Cinematic Universe. It features a timeline that showcases his accomplishments over the years. Warning: Spoiler Alert.'
@@ -49,8 +66,7 @@ class App extends Component {
       {
         name: 'Survey Form',
         images: ['survey.png'],
-        url: 'survey',
-        repo: 'fcc-survey',
+        links: basicLinks('survey'),
         skills: ['html', 'css'],
         copy: [
           'A freeCodeCamp Responsive Web Design project, this simple website is a survey form that asks the user a series of questions.'
@@ -59,8 +75,7 @@ class App extends Component {
       {
         name: 'Product Landing Page',
         images: ['product.png'],
-        url: 'product',
-        repo: 'fcc-product',
+        links: basicLinks('product'),
         skills: ['html', 'css'],
         copy: [
           'A freeCodeCamp Responsive Web Design project, this simple website is landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
@@ -70,8 +85,7 @@ class App extends Component {
       {
         name: 'Technical Documentation',
         images: ['documentation.png'],
-        url: 'documentation',
-        repo: 'fcc-documentation',
+        links: basicLinks('documentation'),
         skills: ['html', 'css'],
         copy: [
           'A freeCodeCamp Responsive Web Design project, this simple website is technical documentation for a number of useful bash commands. It features a sidebar, section headers, and monospaced formatted code blocks, similar to what is often seen on blog or tutorial posts.'
@@ -81,8 +95,13 @@ class App extends Component {
       {
         name: 'Personal Portfolio',
         images: ['portfolio.png'],
-        url: 'portfolio',
-        repo: 'fcc-portfolio',
+        links: [
+          { title: <LinkImg />, url: 'https://gordonscampinggear.com' },
+          {
+            title: <GithubImg />,
+            url: githubUrl('fcc-portfolio')
+          }
+        ],
         skills: ['html', 'css'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -92,16 +111,14 @@ class App extends Component {
       {
         name: 'Random Quote Machine',
         images: ['quote.png'],
-        url: 'quote',
-        repo: 'fcc-quote',
+        links: basicLinks('quote'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
       {
         name: 'Markdown Previewer',
         images: ['markdown.png'],
-        url: 'markdown',
-        repo: 'fcc-markdown',
+        links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -109,8 +126,7 @@ class App extends Component {
       {
         name: 'Drum Machine',
         images: ['drum.png'],
-        url: 'drum',
-        repo: 'fcc-drum',
+        links: basicLinks('drum'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -118,8 +134,7 @@ class App extends Component {
       {
         name: 'Javascript Calculator',
         images: ['calculator.png'],
-        url: 'calculator',
-        repo: 'fcc-calculator',
+        links: basicLinks('calculator'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -127,8 +142,7 @@ class App extends Component {
       {
         name: 'Pomodoro Clock',
         images: ['pomodoro.png'],
-        url: 'pomodoro',
-        repo: 'fcc-pomodoro',
+        links: basicLinks('pomodoro'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -139,8 +153,7 @@ class App extends Component {
       {
         name: 'Bar Chart',
         images: ['barchart.png'],
-        url: 'barchart',
-        repo: 'fcc-barchart',
+        links: basicLinks('barchart'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -148,8 +161,7 @@ class App extends Component {
       {
         name: 'Scatterplot Graph',
         images: ['scatterplot.png'],
-        url: 'scatterplot',
-        repo: 'fcc-scatterplot',
+        links: basicLinks('scatterplot'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       },
@@ -157,8 +169,7 @@ class App extends Component {
       {
         name: 'Heat Map',
         images: ['heatmap.png'],
-        url: 'heatmap',
-        repo: 'fcc-heatmap',
+        links: basicLinks('heatmap'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
       }
@@ -350,6 +361,7 @@ class App extends Component {
                         repo={project.repo}
                         copy={project.copy}
                         skills={project.skills}
+                        links={project.links}
                         handleProjectClick={this.handleProjectClick}
                         handleCancelClick={this.handleCancelClick}
                         index={i}
