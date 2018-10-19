@@ -1,8 +1,11 @@
 import React from 'react';
-import { baseUrl } from './App';
+// import { baseUrl } from './App';
 
 import Modal from './Modal';
 import Container from './Container';
+import Carousel from './Carousel';
+
+const baseUrl = 'gordonscampinggear.com';
 
 const ModalButton = props => {
   return (
@@ -51,9 +54,14 @@ const Project = props => {
             <h1>{props.name}</h1>
 
             <div className="project-modal-images">
-              {images.map((image, i) => (
-                <img key={image} src={image} alt={`${props.name} ${i + 1}`} />
-              ))}
+              {false &&
+                images.map((image, i) => (
+                  <img key={image} src={image} alt={`${props.name} ${i + 1}`} />
+                ))}
+
+              <Carousel images={images} />
+
+              {/* <div className="" /> */}
             </div>
 
             <div className="project-modal-copy">

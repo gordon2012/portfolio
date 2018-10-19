@@ -423,16 +423,6 @@ main {
     font-size: 2em;
   }
 }
-.project-modal-images {
-  padding: 0 1em;
-}
-.project-modal-images img {
-  display: block;
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
 .project-modal-copy {
   flex: 1;
   padding: 0 1em;
@@ -458,4 +448,67 @@ main {
 }
 .project-modal-button:hover {
   background: #f8f8f8;
+}
+
+/* Carousel */
+.carousel {
+  padding: 0 1em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.carousel img {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+.carousel-larger {
+  padding: 0.5em;
+}
+.carousel-smaller {
+  width: 50%;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0;
+  position: relative;
+}
+.carousel-smaller img {
+  cursor: pointer;
+}
+.carousel-fadebox {
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+.carousel-smaller.active .carousel-fadebox {
+  display: block;
+}
+@supports (display: grid) {
+  @media screen and (min-width: 1000px) {
+    .carousel {
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .carousel img {
+      margin: 0;
+      width: 100%;
+    }
+    .carousel-larger {
+      padding: 0;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+    .carousel-smaller {
+      padding: 0;
+      width: 100%;
+    }
+  }
 }
