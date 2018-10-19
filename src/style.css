@@ -405,6 +405,7 @@ main {
 }
 .project-modal h1 {
   text-align: center;
+  padding: 0.5em 0 1.5em;
 }
 .project-modal .close-button {
   position: fixed;
