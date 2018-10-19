@@ -21,7 +21,7 @@ const ModalButton = props => {
 };
 
 const Project = props => {
-  const images = props.images.map(image => `https://${baseUrl}/img/${image}`);
+  const { images } = props;
 
   return (
     <button
@@ -53,16 +53,7 @@ const Project = props => {
             </button>
             <h1>{props.name}</h1>
 
-            <div className="project-modal-images">
-              {false &&
-                images.map((image, i) => (
-                  <img key={image} src={image} alt={`${props.name} ${i + 1}`} />
-                ))}
-
-              <Carousel images={images} />
-
-              {/* <div className="" /> */}
-            </div>
+            <Carousel images={images} />
 
             <div className="project-modal-copy">
               <Container w={800}>

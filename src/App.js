@@ -44,63 +44,121 @@ class App extends Component {
     filter: '',
 
     skills: [
-      { name: 'html', amount: 80 },
+      { name: 'html', amount: 95 },
       { name: 'css', amount: 90 },
       { name: 'javascript', amount: 70 },
+      { name: 'bootstrap', amount: 90 },
+      { name: 'jquery', amount: 80 },
       { name: 'react', amount: 60 },
-      { name: 'd3', amount: 40 }
+      { name: 'd3', amount: 40 },
+      { name: 'php', amount: 60 },
+      { name: 'cakephp', amount: 50 },
+      { name: 'mongodb', amount: 40 },
+      { name: 'mysql', amount: 40 }
     ],
 
     projects: [
       // section
-      { name: 'Responsive Web Design', heading: true },
+      { name: 'Contributions at Salt Creek Media Inc.', heading: true },
+
       {
-        name: 'Tribute',
-        images: [
-          'tribute.png',
-          'survey.png',
-          'product.png',
-          'documentation.png',
-          'portfolio.png'
-        ],
-        links: basicLinks('tribute'),
-        skills: ['html', 'css'],
+        name: 'PURLs',
+        images: [require('./img/purls.png')],
+        links: [{ title: <LinkImg />, url: 'https://purlpro.com/' }],
+        skills: ['html', 'css', 'javascript', 'jquery', 'cakephp'],
         copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is a tribute to Thor, the god of thunder, a fictional character in the Marvel Cinematic Universe. It features a timeline that showcases his accomplishments over the years. Warning: Spoiler Alert.'
-        ]
-      },
-      {
-        name: 'Survey Form',
-        images: ['survey.png'],
-        links: basicLinks('survey'),
-        skills: ['html', 'css'],
-        copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is a survey form that asks the user a series of questions.'
-        ]
-      },
-      {
-        name: 'Product Landing Page',
-        images: ['product.png'],
-        links: basicLinks('product'),
-        skills: ['html', 'css'],
-        copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
+          `PURLs, or Personalized URLs, are landing pages used to improve the response rate of a client's direct mail campaign and collect data from users.`,
+          'I did not invent the concept of PURLs, nor was it I who implemented it at Salt Creek Media. I did, however, create many of the better looking ones, as well as some of the marketing material.',
+          'I also devised a template workflow system for creating new pages that employs the css grid layout that is mobile responsive and features progressive enhancement.',
+          'Marketing page includes links to some examples. Repository not publicly available.'
         ]
       },
 
       {
-        name: 'Technical Documentation',
-        images: ['documentation.png'],
-        links: basicLinks('documentation'),
-        skills: ['html', 'css'],
+        name: 'LeadManager',
+        images: [require('./img/leadmanager.png')],
+        links: [
+          {
+            title: <LinkImg />,
+            url: 'https://saltcreekmedia.com/leadmanager.php'
+          }
+        ],
+        skills: [
+          'html',
+          'css',
+          'javascript',
+          'bootstrap',
+          'jquery',
+          'php',
+          'cakephp',
+          'mongodb'
+        ],
         copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is technical documentation for a number of useful bash commands. It features a sidebar, section headers, and monospaced formatted code blocks, similar to what is often seen on blog or tutorial posts.'
+          'The LeadManager is a lead lookup and campaign management tool that also has many CRM functions. It is used by clients as well as internal stakeholders.',
+          'The LeadManager existed long before I joined Salt Creek Media, but I have contributed to it in the form of bug fixes, feature additions, API integrations, stylistic improvements, and more.',
+          'Marketing page includes screenshots and a video. Repository not publicly available.'
         ]
       },
+
+      {
+        name: 'Whats Mailing',
+        images: [require('./img/whatsmailing.png')],
+        links: [
+          {
+            title: <LinkImg />,
+            url: 'https://whatsmailing.com/'
+          },
+
+          {
+            title: <img src={require('./fa-linkedin.png')} alt="View Post" />,
+            url:
+              'https://www.linkedin.com/feed/update/urn:li:activity:6397218052332679168'
+          }
+        ],
+        skills: [
+          'html',
+          'css',
+          'javascript',
+          'bootstrap',
+          'jquery',
+          'php',
+          'cakephp',
+          'mysql'
+        ],
+        copy: [
+          'Whats Mailing is a library of direct mail pieces collected from across the United States.',
+          'It existed before I joined Salt Creek Media, but I have contributed to it in the form of bug fixes, feature additions, and stylistic improvements.',
+          'Landing page includes screenshots. Linkedin post includes a video. Repository not publicly available.'
+        ]
+      },
+
+      // section
+      { name: 'Personal Projects', heading: true },
+
+      {
+        name: 'Professional Portfolio',
+        images: [require('./img/portfolio.png')],
+        links: [
+          { title: <LinkImg />, url: 'https://gordondoskas.com' },
+          {
+            title: <GithubImg />,
+            url: githubUrl('portfolio')
+          }
+        ],
+        skills: ['html', 'css', 'javascript', 'react'],
+        copy: [
+          'This website (the one you are looking at) is a showcase of the projects I have created and contributed to.',
+          'It is created with React and bundled with Parcel. It is the current culmination of my knowledge and best practices with both React and CSS.',
+          'It features a grid based layout, a project section filterable by skill, a Modal, and a Carousel.'
+        ]
+      },
+
+      // section
+      { name: 'freeCodeCamp Projects', heading: true },
 
       {
         name: 'Personal Portfolio',
-        images: ['portfolio.png'],
+        images: [require('./img/fcc-portfolio.png')],
         links: [
           { title: <LinkImg />, url: 'https://gordonscampinggear.com' },
           {
@@ -110,102 +168,69 @@ class App extends Component {
         ],
         skills: ['html', 'css'],
         copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is a showcase of my completed freeCodeCamp projects. It features a mobile responsive and progressively enhanced css grid based layout.'
+          'A freeCodeCamp Responsive Web Design project, this simple website is an exhaustive showcase of all my completed freeCodeCamp projects, including ones not shown here. It features a mobile responsive and progressively enhanced css grid based layout.'
         ]
       },
 
-      // section
-      { name: 'Front End Libraries', heading: true },
+      {
+        name: 'Product Landing Page',
+        images: [require('./img/product.png')],
+        links: basicLinks('product'),
+        skills: ['html', 'css'],
+        copy: [
+          'A freeCodeCamp Responsive Web Design project, this simple website is landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
+        ]
+      },
+
       {
         name: 'Random Quote Machine',
-        images: ['quote.png'],
+        images: [require('./img/quote.png')],
         links: basicLinks('quote'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
-          'A freeCodeCamp Front End Library project build with React, this website uses the talaikis.com api to generate random quotes and allows them to be tweeted out.'
+          'A freeCodeCamp Front End Library project built with React, this website uses the talaikis.com API to generate random quotes and allows them to be tweeted out.'
         ]
       },
+
       {
         name: 'Markdown Previewer',
-        images: ['markdown.png'],
+        images: [require('./img/markdown.png')],
         links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
-          'A freeCodeCamp Front End Library project build with React, this website is a real time markdown previewer.'
+          'A freeCodeCamp Front End Library project built with React, this website is a WYSIWYG markdown editor that displays a preview in real time.'
         ]
       },
-
-      {
-        name: 'Drum Machine',
-        images: ['drum.png'],
-        links: basicLinks('drum'),
-        skills: ['html', 'css', 'javascript', 'react'],
-        copy: [
-          'A freeCodeCamp Front End Library project build with React, this website is a soundboard that contains all drum sounds.'
-        ]
-      },
-
-      {
-        name: 'Javascript Calculator',
-        images: ['calculator.png'],
-        links: basicLinks('calculator'),
-        skills: ['html', 'css', 'javascript', 'react'],
-        copy: [
-          'A freeCodeCamp Front End Library project build with React, this website is a standard calculator with addition, subtraction, multiplication, and division.'
-        ]
-      },
-
-      {
-        name: 'Pomodoro Clock',
-        images: ['pomodoro.png'],
-        links: basicLinks('pomodoro'),
-        skills: ['html', 'css', 'javascript', 'react'],
-        copy: [
-          'A freeCodeCamp Front End Library project build with React, this website is a tool to implement the Pomodoro method, which involves doing 25 minutes of work and 5 minutes of rest. The work and rest times are configurable.'
-        ]
-      },
-
-      // section
-      { name: 'Data Visualization', heading: true },
 
       {
         name: 'Bar Chart',
-        images: ['barchart.png'],
+        images: [require('./img/barchart.png')],
         links: basicLinks('barchart'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
-          'A freeCodeCamp Data Visualization project build with D3, this website is a visualization of the rise (and occasional slight fall) of the United States GDP since 1947.'
+          'A freeCodeCamp Data Visualization project built with D3, this website is a visualization of the rise (and occasional slight fall) of the United States GDP since 1947.'
         ]
       },
 
       {
         name: 'Scatterplot Graph',
-        images: ['scatterplot.png'],
+        images: [require('./img/scatterplot.png')],
         links: basicLinks('scatterplot'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
-          'A freeCodeCamp Data Visualization project build with D3, this website is a visualization of cycling times of doping and clean riders since 1994.'
+          'A freeCodeCamp Data Visualization project build with D3, this website is a visualization of race finish times of cyclists since 1994, denoting those who were caught doping.'
         ]
       },
 
       {
         name: 'Heat Map',
-        images: ['heatmap.png'],
+        images: [require('./img/heatmap.png')],
         links: basicLinks('heatmap'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
           'A freeCodeCamp Data Visualization project build with D3, this website is a visualization of the variation in global temperature since 1753.'
         ]
       }
-
-      /*{
-        name: '_',
-        images: ['_.png'],
-        url: '_',
-        repo: 'fcc-_',
-        skills: ['html', 'css', 'javascript', 'd3'],
-        copy: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum']
-      }*/
     ]
   };
 
@@ -259,7 +284,7 @@ class App extends Component {
             <Container w={800}>
               <div className="hero-title">
                 <img
-                  src="https://avatars2.githubusercontent.com/u/9071982?s=460&v=4"
+                  src={`https://avatars2.githubusercontent.com/u/9071982?s=460&v=4`}
                   alt="Gordon Doskas"
                 />
                 <h1>Gordon Doskas</h1>
