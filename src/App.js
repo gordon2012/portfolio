@@ -40,7 +40,7 @@ class App extends Component {
 
     profile: [
       `I am a Front End Web Developer at Salt Creek Media, a Redstone Technologies company. I have a Bachelor's Degree of Science focused in Information Technology/Software Engineering.`,
-      `I am part of a team of developers that creates and maintains multiple custom enterprise software applications, in which I routinely fix bugs, add features, create API integrations, and make stylistic improvements. My main focus is creating custom, mobile responsive, progressively enhanced marking landing pages for clients to improve the effectiveness of their direct mail campaigns.`,
+      `I am part of a team of developers that creates and maintains multiple custom enterprise software applications, in which I routinely fix bugs, add features, create API integrations, and make stylistic improvements. My main focus is creating custom, mobile responsive, progressively enhanced marketing landing pages for clients to improve the effectiveness of their direct mail campaigns.`,
       `I am skilled in many front end and back end technologies including HTML, CSS, JavaScript, Bootstrap, JQuery, React, D3, PHP, CakePHP, MongoDB, and MySQL.`,
       `I am also well versed in various technologies, tools, and methodologies including git, Github, npm, Webpack, Parcel, Bash, Apache, Nginx, and Scrum.`
     ],
