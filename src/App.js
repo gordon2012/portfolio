@@ -10,12 +10,8 @@ const baseUrl = 'gordondoskas.com';
 const siteUrl = sub => `https://${sub}.${baseUrl}`;
 const githubUrl = repo => `https://github.com/gordon2012/${repo}`;
 
-const LinkImg = () => (
-  <img src={require('./fa-external-link.png')} alt="Visit Site" />
-);
-const GithubImg = () => (
-  <img src={require('./fa-github.png')} alt="View Repository" />
-);
+const LinkImg = () => <img src="fa-external-link.png" alt="Visit Site" />;
+const GithubImg = () => <img src="fa-github.png" alt="View Repository" />;
 
 const basicLinks = name => [
   { title: <LinkImg />, url: siteUrl(name) },
@@ -62,7 +58,7 @@ class App extends Component {
 
       {
         name: 'PURLs',
-        images: [require('./img/purls.png'), require('./img/purls2.png')],
+        images: ['purls.png', 'purls2.png'],
         links: [{ title: <LinkImg />, url: 'https://purlpro.com/' }],
         skills: ['html', 'css', 'javascript', 'jquery', 'cakephp'],
         copy: [
@@ -75,10 +71,7 @@ class App extends Component {
 
       {
         name: 'LeadManager',
-        images: [
-          require('./img/leadmanager.png'),
-          require('./img/leadmanager2.png')
-        ],
+        images: ['leadmanager.png', 'leadmanager2.png'],
         links: [
           {
             title: <LinkImg />,
@@ -104,10 +97,7 @@ class App extends Component {
 
       {
         name: 'Whats Mailing',
-        images: [
-          require('./img/whatsmailing.png'),
-          require('./img/whatsmailing2.png')
-        ],
+        images: ['whatsmailing.png', 'whatsmailing2.png'],
         links: [
           {
             title: <LinkImg />,
@@ -115,7 +105,7 @@ class App extends Component {
           },
 
           {
-            title: <img src={require('./fa-linkedin.png')} alt="View Post" />,
+            title: <img src="fa-linkedin.png" alt="View Post" />,
             url:
               'https://www.linkedin.com/feed/update/urn:li:activity:6397218052332679168'
           }
@@ -142,10 +132,7 @@ class App extends Component {
 
       {
         name: 'Professional Portfolio',
-        images: [
-          require('./img/portfolio.png'),
-          require('./img/portfolio2.png')
-        ],
+        images: ['portfolio.png', 'portfolio.png', 'portfolio2.png'],
         links: [
           { title: <LinkImg />, url: 'https://gordondoskas.com' },
           {
@@ -166,10 +153,7 @@ class App extends Component {
 
       {
         name: 'Personal Portfolio',
-        images: [
-          require('./img/fcc-portfolio.png'),
-          require('./img/fcc-portfolio2.png')
-        ],
+        images: ['fcc-portfolio.png', 'fcc-portfolio2.png'],
         links: basicLinks('portfolio'),
         skills: ['html', 'css'],
         copy: [
@@ -179,7 +163,7 @@ class App extends Component {
 
       {
         name: 'Product Landing Page',
-        images: [require('./img/product.png'), require('./img/product2.png')],
+        images: ['product.png', 'product2.png'],
         links: basicLinks('product'),
         skills: ['html', 'css'],
         copy: [
@@ -189,7 +173,7 @@ class App extends Component {
 
       {
         name: 'Random Quote Machine',
-        images: [require('./img/quote.png'), require('./img/quote2.png')],
+        images: ['quote.png', 'quote2.png'],
         links: basicLinks('quote'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
@@ -199,7 +183,7 @@ class App extends Component {
 
       {
         name: 'Markdown Previewer',
-        images: [require('./img/markdown.png'), require('./img/markdown2.png')],
+        images: ['markdown.png', 'markdown2.png'],
         links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
@@ -209,7 +193,7 @@ class App extends Component {
 
       {
         name: 'Bar Chart',
-        images: [require('./img/barchart.png'), require('./img/barchart2.png')],
+        images: ['barchart.png', 'barchart2.png'],
         links: basicLinks('barchart'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
@@ -219,10 +203,7 @@ class App extends Component {
 
       {
         name: 'Scatterplot Graph',
-        images: [
-          require('./img/scatterplot.png'),
-          require('./img/scatterplot2.png')
-        ],
+        images: ['scatterplot.png', 'scatterplot2.png'],
         links: basicLinks('scatterplot'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
@@ -232,7 +213,7 @@ class App extends Component {
 
       {
         name: 'Heat Map',
-        images: [require('./img/heatmap.png'), require('./img/heatmap2.png')],
+        images: ['heatmap.png', 'heatmap2.png'],
         links: basicLinks('heatmap'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [

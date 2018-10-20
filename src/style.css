@@ -186,7 +186,7 @@ main {
 
 /* Hero */
 #hero {
-  background-image: url('./yellowstone.jpg');
+  background-image: url('yellowstone.jpg');
   background-position: bottom right;
 }
 .hero-title {
