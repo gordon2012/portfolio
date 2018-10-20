@@ -38,6 +38,13 @@ class App extends Component {
     activeModal: -1,
     filter: '',
 
+    profile: [
+      `I am a Front End Web Developer at Salt Creek Media, a Redstone Technologies company. I have a Bachelor's Degree of Science focused in Information Technology/Software Engineering.`,
+      `I am part of a team of developers that creates and maintains multiple custom enterprise software applications, in which I routinely fix bugs, add features, create API integrations, and make stylistic improvements. My main focus is creating custom, mobile responsive, progressively enhanced marking landing pages for clients to improve the effectiveness of their direct mail campaigns.`,
+      `I am skilled in many front end and back end technologies including HTML, CSS, JavaScript, Bootstrap, JQuery, React, D3, PHP, CakePHP, MongoDB, and MySQL.`,
+      `I am also well versed in various technologies, tools, and methodologies including git, Github, npm, Webpack, Parcel, Bash, Apache, Nginx, and Scrum.`
+    ],
+
     skills: [
       { name: 'html', amount: 95 },
       { name: 'css', amount: 90 },
@@ -286,11 +293,10 @@ class App extends Component {
             <Container w={800}>
               <div className="profile card">
                 <h1>Profile</h1>
-                <p
-                >{`I am a Front End Web Developer with a bachelor's degree in IT: Software Engineering at Salt Creek Media Inc, an enterprise software shop that develops and maintains custom ERP, CRM, and automation software for a large Direct Mail Print shop. Most of my time is spent building custom, responsive, mobile friendly marketing landing pages for clients to improve the effectiveness of their direct mail campaigns. I also frequently add features to our customer facing and internal web applications.`}</p>
 
-                <p
-                >{`I am skilled in many front end technologies including HTML, CSS, SASS, Bootstrap JavaScript, JQuery, and React. I am also familiar with back end technologies such as PHP, CakePHP, Apache, MongoDB, and MySQL. I frequently use various tools and methodologies such as Git, GitHub, npm, Gulp, Webpack, Bash, and Scrum.`}</p>
+                {this.state.profile.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
             </Container>
           </section>
