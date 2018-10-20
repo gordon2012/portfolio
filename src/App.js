@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
 import memoize from 'memoize-one';
 
 import Container from './Container';
 import Project from './Project';
 
-const baseUrl = 'gordonscampinggear.com';
+const baseUrl = 'gordondoskas.com';
 
 const siteUrl = sub => `https://${sub}.${baseUrl}`;
 const githubUrl = repo => `https://github.com/gordon2012/${repo}`;
@@ -159,13 +158,7 @@ class App extends Component {
       {
         name: 'Personal Portfolio',
         images: [require('./img/fcc-portfolio.png')],
-        links: [
-          { title: <LinkImg />, url: 'https://gordonscampinggear.com' },
-          {
-            title: <GithubImg />,
-            url: githubUrl('fcc-portfolio')
-          }
-        ],
+        links: basicLinks('portfolio'),
         skills: ['html', 'css'],
         copy: [
           'A freeCodeCamp Responsive Web Design project, this simple website is an exhaustive showcase of all my completed freeCodeCamp projects, including ones not shown here. It features a mobile responsive and progressively enhanced css grid based layout.'

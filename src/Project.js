@@ -1,11 +1,8 @@
 import React from 'react';
-// import { baseUrl } from './App';
 
 import Modal from './Modal';
 import Container from './Container';
 import Carousel from './Carousel';
-
-const baseUrl = 'gordonscampinggear.com';
 
 const ModalButton = props => {
   return (
