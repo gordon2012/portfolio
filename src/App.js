@@ -183,7 +183,7 @@ class App extends Component {
 
       {
         name: 'Markdown Previewer',
-        images: ['markdown.png', 'markdown2.png'],
+        images: ['markdown.png', 'markdown3.png'],
         links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
