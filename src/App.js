@@ -132,7 +132,7 @@ class App extends Component {
 
       {
         name: 'Professional Portfolio',
-        images: ['portfolio.png', 'portfolio.png', 'portfolio2.png'],
+        images: ['portfolio.png', 'portfolio2.png'],
         links: [
           { title: <LinkImg />, url: 'https://gordondoskas.com' },
           {
