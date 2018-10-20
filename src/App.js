@@ -167,7 +167,7 @@ class App extends Component {
         links: basicLinks('product'),
         skills: ['html', 'css'],
         copy: [
-          'A freeCodeCamp Responsive Web Design project, this simple website is landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
+          'A freeCodeCamp Responsive Web Design project, this simple website is a landing page for a fictional product company. It features an email signup form, a sticky navbar, product and feature descriptions, and an embedded video.'
         ]
       },
 
