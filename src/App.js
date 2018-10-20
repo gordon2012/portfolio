@@ -62,7 +62,7 @@ class App extends Component {
 
       {
         name: 'PURLs',
-        images: [require('./img/purls.png')],
+        images: [require('./img/purls.png'), require('./img/purls2.png')],
         links: [{ title: <LinkImg />, url: 'https://purlpro.com/' }],
         skills: ['html', 'css', 'javascript', 'jquery', 'cakephp'],
         copy: [
@@ -75,7 +75,10 @@ class App extends Component {
 
       {
         name: 'LeadManager',
-        images: [require('./img/leadmanager.png')],
+        images: [
+          require('./img/leadmanager.png'),
+          require('./img/leadmanager2.png')
+        ],
         links: [
           {
             title: <LinkImg />,
@@ -101,7 +104,10 @@ class App extends Component {
 
       {
         name: 'Whats Mailing',
-        images: [require('./img/whatsmailing.png')],
+        images: [
+          require('./img/whatsmailing.png'),
+          require('./img/whatsmailing2.png')
+        ],
         links: [
           {
             title: <LinkImg />,
@@ -136,7 +142,10 @@ class App extends Component {
 
       {
         name: 'Professional Portfolio',
-        images: [require('./img/portfolio.png')],
+        images: [
+          require('./img/portfolio.png'),
+          require('./img/portfolio2.png')
+        ],
         links: [
           { title: <LinkImg />, url: 'https://gordondoskas.com' },
           {
@@ -157,7 +166,10 @@ class App extends Component {
 
       {
         name: 'Personal Portfolio',
-        images: [require('./img/fcc-portfolio.png')],
+        images: [
+          require('./img/fcc-portfolio.png'),
+          require('./img/fcc-portfolio2.png')
+        ],
         links: basicLinks('portfolio'),
         skills: ['html', 'css'],
         copy: [
@@ -167,7 +179,7 @@ class App extends Component {
 
       {
         name: 'Product Landing Page',
-        images: [require('./img/product.png')],
+        images: [require('./img/product.png'), require('./img/product2.png')],
         links: basicLinks('product'),
         skills: ['html', 'css'],
         copy: [
@@ -177,7 +189,7 @@ class App extends Component {
 
       {
         name: 'Random Quote Machine',
-        images: [require('./img/quote.png')],
+        images: [require('./img/quote.png'), require('./img/quote2.png')],
         links: basicLinks('quote'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
@@ -187,7 +199,7 @@ class App extends Component {
 
       {
         name: 'Markdown Previewer',
-        images: [require('./img/markdown.png')],
+        images: [require('./img/markdown.png'), require('./img/markdown2.png')],
         links: basicLinks('markdown'),
         skills: ['html', 'css', 'javascript', 'react'],
         copy: [
@@ -197,7 +209,7 @@ class App extends Component {
 
       {
         name: 'Bar Chart',
-        images: [require('./img/barchart.png')],
+        images: [require('./img/barchart.png'), require('./img/barchart2.png')],
         links: basicLinks('barchart'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
@@ -207,7 +219,10 @@ class App extends Component {
 
       {
         name: 'Scatterplot Graph',
-        images: [require('./img/scatterplot.png')],
+        images: [
+          require('./img/scatterplot.png'),
+          require('./img/scatterplot2.png')
+        ],
         links: basicLinks('scatterplot'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [
@@ -217,7 +232,7 @@ class App extends Component {
 
       {
         name: 'Heat Map',
-        images: [require('./img/heatmap.png')],
+        images: [require('./img/heatmap.png'), require('./img/heatmap2.png')],
         links: basicLinks('heatmap'),
         skills: ['html', 'css', 'javascript', 'd3'],
         copy: [

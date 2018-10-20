@@ -50,7 +50,9 @@ const Project = props => {
             </button>
             <h1>{props.name}</h1>
 
-            <Carousel images={images} />
+            <Container w={1200}>
+              <Carousel images={images} />
+            </Container>
 
             <div className="project-modal-copy">
               <Container w={800}>

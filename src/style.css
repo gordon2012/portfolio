@@ -36,10 +36,10 @@ h2 {
   font-size: 1.5em;
 }
 body {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 .brand {
-  font-family: 'Black Ops One', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 1.3em;
 }
 h1,
@@ -48,7 +48,7 @@ h2 {
 }
 .hero-title h1,
 .hero-title h2 {
-  font-family: 'Black Ops One', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 /* Utility */
@@ -413,7 +413,7 @@ main {
   cursor: pointer;
   border: none;
   background: transparent;
-
+  z-index: 1;
   top: 2vh;
   right: 8vw;
   font-size: 1.5em;
