@@ -200,8 +200,9 @@ main {
 }
 .hero-title h1,
 .hero-title h2 {
-  text-shadow: -1px 1px 1px #ffffff, -1px -1px 1px #ffffff, 1px 1px 1px #ffffff,
-    1px -1px 1px #ffffff;
+  color: white;
+  text-shadow: -2px 2px 2px black, -2px -2px 2px black, 2px 2px 2px black,
+    2px -2px 2px black;
 }
 
 .hero-title {
